@@ -39,7 +39,7 @@ function redisLink() {
     static $r = false;
 
     if ($r) return $r;
-    $r = new Predis\Client();
+    $r = new Predis\Client('tcp://redis:6379');
     return $r;
 }
 
